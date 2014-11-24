@@ -30,6 +30,9 @@ public class HotOrCold {
 		if(i-lastinput < i - input){
 			s="Cold!You are getting Farther!";
 		}
+		if(i-lastinput > i - input){
+			s="Hot!You are getting Closer!";
+		}
 		return s;
 	}
 
