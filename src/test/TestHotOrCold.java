@@ -59,5 +59,8 @@ public class TestHotOrCold {
 			assertEquals("Congratz you got the right number!",h.Compare(randomNum,lastinput,input));
 			}	
 		}
+	@Test public void TestRestChance(){
+		assertEquals(1,h.RestChance());
+	}
 	
 }

@@ -39,4 +39,8 @@ public class HotOrCold {
 		return s;
 	}
 
+	public Object RestChance() {
+		return null;
+	}
+
 }
