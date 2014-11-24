@@ -1,5 +1,7 @@
 package test;
 
+import main.HotOrCold;
+
 import org.junit.Test;
 
 public class TestHotOrCold {
