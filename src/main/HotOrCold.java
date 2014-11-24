@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class HotOrCold {
 	Random rand = new Random();
+	int restChance = 0;
 	
 	public int RandomNum() {
 		int i = rand.nextInt(75)+1;
@@ -40,7 +41,8 @@ public class HotOrCold {
 	}
 
 	public Object RestChance() {
-		return null;
+		restChance++;
+		return restChance;
 	}
 
 }
