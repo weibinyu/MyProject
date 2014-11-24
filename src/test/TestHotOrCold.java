@@ -60,7 +60,10 @@ public class TestHotOrCold {
 			}	
 		}
 	@Test public void TestRestChance(){
-		assertEquals(1,h.RestChance());
+		assertRestChance(1);
+	}
+	public void assertRestChance(int input){
+		assertEquals(input,h.RestChance());
 	}
 	
 }
