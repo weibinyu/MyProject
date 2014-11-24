@@ -7,10 +7,13 @@ import org.junit.Test;
 
 
 public class TestHotOrCold {
+	
 	@Test public void TryHotOrCold(){
 		new HotOrCold();
 	}
 	HotOrCold h = new HotOrCold();
+	
+	
 	int lastinput = 0;
 	@Test public void CreateRandomNum(){
 		int rand = h.RandomNum();
@@ -63,9 +66,12 @@ public class TestHotOrCold {
 		int randomNum = 70;
 		int input = 70;
 		int lastinput = 60;
+		try{
 		if(input == randomNum){
 			assertEquals("Congratz you got the right number!",h.Compare(randomNum,lastinput,input));
+			fail("should throw Excetion and show player won");
 			}	
+		}catch(Exception e){}
 		}
 	@Test public void TestRestChance(){
 		assertRestChance(1);
@@ -95,5 +101,6 @@ public class TestHotOrCold {
 			// TODO Auto-generated catch block
 		}
 	}
+	
 	
 }

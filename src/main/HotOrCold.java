@@ -30,7 +30,7 @@ public class HotOrCold {
 		if(input == i){
 			s= "Congratz you got the right number!";
 			return s;
-			}	
+		}	
 		if(i-lastinput < i - input){
 			s="Cold!You are getting Farther!";
 		}
