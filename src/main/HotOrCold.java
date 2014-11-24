@@ -15,6 +15,10 @@ public class HotOrCold {
 
 	public void CheckInput(Object input) {
 		if(input instanceof Integer){
+			int i = (Integer) input;
+			if(i < 1 || i > 75){
+				throw new IllegalArgumentException();
+			}
 			
 		}else{
 			throw new IllegalArgumentException();
