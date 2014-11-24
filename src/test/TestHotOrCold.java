@@ -20,11 +20,9 @@ public class TestHotOrCold {
 		assertNotEquals(rand,h.RandomNum());
 	}
 	@Test public void RandomNumSize(){
-		try{
 		if(h.RandomNum()<1||h.RandomNum()>75){
-			fail("Should throw IllegalArgumentException");
+			
 		}
-		}catch(IllegalArgumentException e){}
 	}
 	@Test public void 	TestInputTooLarge(){
 		assertThrow(76);
