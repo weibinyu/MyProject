@@ -23,16 +23,13 @@ public class TestHotOrCold {
 		}
 		}catch(IllegalArgumentException e){}
 	}
-	@Test public void 	TestInputIsInt(){
-		assertThrow("n");
-	}
 	@Test public void 	TestInputTooLarge(){
 		assertThrow(76);
 	}
 	@Test public void 	TestInputTooLow(){
 		assertThrow(0);
 	}
-	public void assertThrow(Object input){
+	public void assertThrow(int input){
 		try{
 			h.CheckInput(input);
 			fail("Should throw illegalArgumentExecption");
@@ -46,7 +43,14 @@ public class TestHotOrCold {
 			assertEquals("Cold!You are getting Farther!",h.Compare(randomNum,lastinput,input));
 			}
 		}
-
+	@Test public void 	TestCompareifCloser(){
+		int randomNum = 70;
+		int input = 40;
+		int lastinput = 60;
+		if(randomNum -lastinput > randomNum - input){
+			assertEquals("Hot!You are getting Closer!",h.Compare(randomNum,lastinput,input));
+			}
+		}
 	@Test public void 	TestCompareIfEqual(){
 		int randomNum = 70;
 		int input = 70;

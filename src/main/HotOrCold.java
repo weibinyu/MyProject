@@ -1,5 +1,7 @@
 package main;
 
+
+
 import java.util.Random;
 
 public class HotOrCold {
@@ -13,15 +15,12 @@ public class HotOrCold {
 		return i;
 	}
 
-	public void CheckInput(Object input) {
-		if(input instanceof Integer){
-			int i = (Integer) input;
-			if(i < 1 || i > 75){
-				throw new IllegalArgumentException();
-			}
-			
-		}else{
+	public void CheckInput(int input) {
+		if(input < 1 || input > 75){
 			throw new IllegalArgumentException();
+		}
+		else{
+			return;
 		}
 	}
 
