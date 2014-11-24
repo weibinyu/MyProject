@@ -51,6 +51,14 @@ public class TestHotOrCold {
 			assertEquals("Hot!You are getting Closer!",h.Compare(randomNum,lastinput,input));
 			}
 		}
+	@Test public void 	TestCompareIfNoChange(){
+		int randomNum = 50;
+		int input = 40;
+		int lastinput = 60;
+		if(randomNum -lastinput == randomNum - input || randomNum -lastinput == (randomNum - input)*-1){
+			assertEquals("Distance didn't change!",h.Compare(randomNum,lastinput,input));
+			}	
+		}
 	@Test public void 	TestCompareIfEqual(){
 		int randomNum = 70;
 		int input = 70;
@@ -72,15 +80,19 @@ public class TestHotOrCold {
 		assertRestChance(10);
 		try {
 			if(h.RestChance()==11){
-				fail("Should show chanes are over and throw an exception");
+				if(h.RestChance()==11){
+					fail("Should show chanes are over and throw an exception");
+				}
 			}
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 		}
 	}
 	public void assertRestChance(int input){
 		try {
 			assertEquals(input,h.RestChance());
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 		}
 	}
 	
