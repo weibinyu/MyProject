@@ -23,20 +23,17 @@ public class TestHotOrCold {
 		}catch(IllegalArgumentException e){}
 	}
 	@Test public void 	TestInputIsInt(){
-		try{
-			h.CheckInput("n");
-			fail("Should throw illegalArgumentExecption");
-			}catch(IllegalArgumentException e){}
+		assertThrow("n");
 	}
 	@Test public void 	TestInputTooLarge(){
-		try{
-			h.CheckInput(76);
-			fail("Should throw illegalArgumentExecption");
-			}catch(IllegalArgumentException e){}
+		assertThrow(76);
 	}
 	@Test public void 	TestInputTooLow(){
+		assertThrow(0);
+	}
+	public void assertThrow(Object input){
 		try{
-			h.CheckInput(0);
+			h.CheckInput(input);
 			fail("Should throw illegalArgumentExecption");
 			}catch(IllegalArgumentException e){}
 	}
