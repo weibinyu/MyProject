@@ -70,12 +70,18 @@ public class TestHotOrCold {
 		assertRestChance(8);
 		assertRestChance(9);
 		assertRestChance(10);
-		if(h.RestChance()==11){
-			fail("Should show chanes are over and end system");
+		try {
+			if(h.RestChance()==11){
+				fail("Should show chanes are over and throw an exception");
+			}
+		} catch (Exception e) {
 		}
 	}
 	public void assertRestChance(int input){
-		assertEquals(input,h.RestChance());
+		try {
+			assertEquals(input,h.RestChance());
+		} catch (Exception e) {
+		}
 	}
 	
 }

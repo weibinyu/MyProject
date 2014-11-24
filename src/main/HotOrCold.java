@@ -40,8 +40,12 @@ public class HotOrCold {
 		return s;
 	}
 
-	public int RestChance() {
+	public int RestChance() throws Exception {
 		restChance++;
+		if(restChance == 11){
+			System.out.print("Your chances are over, sorry you lost");
+			throw new Exception();
+		}
 		return restChance;
 	}
 
