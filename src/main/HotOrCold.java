@@ -25,11 +25,12 @@ public class HotOrCold {
 		}
 	}
 
-	public String Compare(int i, int lastinput, int input) {
+	public String Compare(int i, int lastinput, int input) throws Exception {
 		String s = null;
 		if(input == i){
 			s= "Congratz you got the right number!";
-			return s;
+			System.out.print(s);
+			throw new Exception();
 		}	
 		if(i-lastinput < i - input){
 			s="Cold!You are getting Farther!";

@@ -38,7 +38,7 @@ public class TestHotOrCold {
 			fail("Should throw illegalArgumentExecption");
 			}catch(IllegalArgumentException e){}
 	}
-	@Test public void 	TestCompareifFarther(){
+	@Test public void 	TestCompareifFarther() throws Exception{
 		int randomNum = 70;
 		int input = 40;
 		int lastinput = 60;
@@ -46,7 +46,7 @@ public class TestHotOrCold {
 			assertEquals("Cold!You are getting Farther!",h.Compare(randomNum,lastinput,input));
 			}
 		}
-	@Test public void 	TestCompareifCloser(){
+	@Test public void 	TestCompareifCloser() throws Exception{
 		int randomNum = 70;
 		int input = 40;
 		int lastinput = 60;
@@ -54,7 +54,7 @@ public class TestHotOrCold {
 			assertEquals("Hot!You are getting Closer!",h.Compare(randomNum,lastinput,input));
 			}
 		}
-	@Test public void 	TestCompareIfNoChange(){
+	@Test public void 	TestCompareIfNoChange() throws Exception{
 		int randomNum = 50;
 		int input = 40;
 		int lastinput = 60;
