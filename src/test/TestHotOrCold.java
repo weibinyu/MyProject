@@ -46,12 +46,14 @@ public class TestHotOrCold {
 			assertEquals("Cold!You are getting Farther!",h.Compare(randomNum,lastinput,input));
 			}
 		}
-	@Test public void 	TestCompareIfCloser(){
+
+	@Test public void 	TestCompareIfEqual(){
 		int randomNum = 70;
-		int input = 65;
+		int input = 70;
 		int lastinput = 60;
-		if(randomNum -lastinput > randomNum - input){
-			assertEquals("Hot!You are getting Closer!",h.Compare(randomNum,lastinput,input));
+		if(input == randomNum){
+			assertEquals("Congratz you got the right number!",h.Compare(randomNum,lastinput,input));
 			}	
 		}
+	
 }
