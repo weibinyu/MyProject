@@ -28,4 +28,16 @@ public class TestHotOrCold {
 			fail("Should throw illegalArgumentExecption");
 			}catch(IllegalArgumentException e){}
 	}
+	@Test public void 	TestInputTooLarge(){
+		try{
+			h.CheckInput(76);
+			fail("Should throw illegalArgumentExecption");
+			}catch(IllegalArgumentException e){}
+	}
+	@Test public void 	TestInputTooLow(){
+		try{
+			h.CheckInput(0);
+			fail("Should throw illegalArgumentExecption");
+			}catch(IllegalArgumentException e){}
+	}
 }
