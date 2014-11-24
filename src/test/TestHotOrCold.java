@@ -39,13 +39,12 @@ public class TestHotOrCold {
 			}catch(IllegalArgumentException e){}
 	}
 	@Test public void 	TestCompare(){
-		int i = h.RandomNum();
+		int randomNum = 70;
 		int input = 40;
 		int lastinput = 60;
-		if(i-lastinput < i - input){
-			assertEquals("Cold!You are getting Farther!",h.Compare(70,lastinput,input));
+		if(randomNum -lastinput < randomNum - input){
+			assertEquals("Cold!You are getting Farther!",h.Compare(randomNum,lastinput,input));
 		}
-		
 			
 	}
 }
