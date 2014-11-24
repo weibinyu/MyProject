@@ -37,7 +37,9 @@ public class HotOrCold {
 		if(i-lastinput > i - input){
 			s="Hot!You are getting Closer!";
 		}
-		
+		if(i -lastinput == i - input || i -lastinput == (i - input)*-1){
+			s="Distance didn't change!";
+		}
 		return s;
 	}
 
