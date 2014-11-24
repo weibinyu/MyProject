@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 
 
 public class TestHotOrCold {
-	
+
 	@Test public void TryHotOrCold(){
 		new HotOrCold();
 	}
@@ -27,10 +27,13 @@ public class TestHotOrCold {
 		assertNotEquals(rand,h.RandomNum());
 	}
 	@Test public void RandomNumSize(){
-		if(h.RandomNum()<1||h.RandomNum()>75){
-			
+		try{
+			if(h.RandomNum()<1||h.RandomNum()>75){
+				fail("Should throw IllegalArgumentException");
+				
+			}
+			}catch(IllegalArgumentException e){}
 		}
-	}
 	@Test public void 	TestInputTooLarge(){
 		assertThrow(76);
 	}
@@ -45,38 +48,30 @@ public class TestHotOrCold {
 			}catch(IllegalArgumentException e){}
 	}
 	@Test public void 	TestCompareifFarther() throws Exception{
-		int randomNum = 70;
+		int randomNum = 20;
 		int input = 40;
 		int lastinput = 60;
-		if(randomNum -lastinput < randomNum - input){
-			assertEquals("Cold!You are getting Farther!",h.Compare(randomNum,lastinput,input));
-			}
+		assertEquals("Cold!You are getting Farther!",h.Compare(randomNum,lastinput,input));
 		}
 	@Test public void 	TestCompareifCloser() throws Exception{
 		int randomNum = 70;
 		int input = 60;
 		int lastinput = 40;
-		if(randomNum -lastinput > randomNum - input){
 			assertEquals("Hot!You are getting Closer!",h.Compare(randomNum,lastinput,input));
-			}
 		}
 	@Test public void 	TestCompareIfNoChange() throws Exception{
 		int randomNum = 50;
 		int input = 40;
 		int lastinput = 60;
-		if(randomNum -lastinput == randomNum - input || randomNum -lastinput == (randomNum - input)*-1){
-			assertEquals("Distance didn't change!",h.Compare(randomNum,lastinput,input));
-			}	
+		assertEquals("Distance didn't change!",h.Compare(randomNum,lastinput,input));
 		}
 	@Test public void 	TestCompareIfEqual(){
 		int randomNum = 70;
 		int input = 70;
 		int lastinput = 60;
 		try{
-		if(input == randomNum){
 			assertEquals("Congratz you got the right number!",h.Compare(randomNum,lastinput,input));
 			fail("should throw Excetion and show player won");
-			}	
 		}catch(Exception e){}
 		}
 	@Test public void TestRestChance(){

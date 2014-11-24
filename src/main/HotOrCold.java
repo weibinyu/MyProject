@@ -10,9 +10,11 @@ public class HotOrCold {
 	
 	public int RandomNum() {
 		int i = rand.nextInt(75)+1;
+		if(i < 1 || i> 75)
+			throw new IllegalArgumentException();
 		return i;
 	}
-
+	
 	public void CheckInput(int input) {
 		if(input < 1 || input > 75){
 			throw new IllegalArgumentException();
@@ -25,17 +27,9 @@ public class HotOrCold {
 			s= "Congratz you got the right number!";
 			System.out.print(s);
 			throw new Exception();
-		}	
-		if(i-lastinput < i - input){
-			s="Cold!You are getting Farther!";
 		}
-		if(i-lastinput > i - input){
-			s="Hot!You are getting Closer!";
-		}
-		if(i -lastinput == i - input || i -lastinput == (i - input)*-1){
-			s="Distance didn't change!";
-		}
-		return s;
+		return s;	
+
 	}
 
 	public int RestChance() throws Exception {
