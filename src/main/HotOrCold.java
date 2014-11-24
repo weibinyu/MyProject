@@ -46,5 +46,7 @@ public class HotOrCold {
 		}
 		return restChance;
 	}
-
+	public int test(HotOrCold hoc) throws Exception{
+		return hoc.RandomNum();
+	}
 }

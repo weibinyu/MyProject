@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import main.HotOrCold;
 
 import org.junit.Test;
+import org.mockito.Mockito;
 
 
 public class TestHotOrCold {
@@ -12,7 +13,13 @@ public class TestHotOrCold {
 		new HotOrCold();
 	}
 	HotOrCold h = new HotOrCold();
-	
+	@Test public void testCompare() throws Exception{
+		HotOrCold HoC = Mockito.mock(HotOrCold.class);
+		Mockito.when(HoC.RandomNum()).thenReturn(50);
+		HotOrCold run = new HotOrCold();
+		run.test(HoC);
+		assertEquals(run.test(HoC),50);
+	}
 	
 	int lastinput = 0;
 	@Test public void CreateRandomNum(){
