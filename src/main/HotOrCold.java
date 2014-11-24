@@ -20,9 +20,6 @@ public class HotOrCold {
 		if(input < 1 || input > 75){
 			throw new IllegalArgumentException();
 		}
-		else{
-			return;
-		}
 	}
 
 	public String Compare(int i, int lastinput, int input) throws Exception {

@@ -32,6 +32,7 @@ public class TestHotOrCold {
 	@Test public void 	TestInputTooLow(){
 		assertThrow(0);
 	}
+	
 	public void assertThrow(int input){
 		try{
 			h.CheckInput(input);
@@ -48,8 +49,8 @@ public class TestHotOrCold {
 		}
 	@Test public void 	TestCompareifCloser() throws Exception{
 		int randomNum = 70;
-		int input = 40;
-		int lastinput = 60;
+		int input = 60;
+		int lastinput = 40;
 		if(randomNum -lastinput > randomNum - input){
 			assertEquals("Hot!You are getting Closer!",h.Compare(randomNum,lastinput,input));
 			}
@@ -85,11 +86,9 @@ public class TestHotOrCold {
 		assertRestChance(9);
 		assertRestChance(10);
 		try {
-			if(h.RestChance()==11){
-				if(h.RestChance()==11){
+			if(h.RestChance() == 11){
 					fail("Should show chanes are over and throw an exception");
 				}
-			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 		}
