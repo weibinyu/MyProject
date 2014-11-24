@@ -14,7 +14,11 @@ public class HotOrCold {
 	}
 
 	public void CheckInput(Object input) {
-		
+		if(input instanceof Integer){
+			
+		}else{
+			throw new IllegalArgumentException();
+		}
 	}
 
 }
