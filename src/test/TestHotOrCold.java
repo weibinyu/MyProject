@@ -48,7 +48,7 @@ public class TestHotOrCold {
 			}catch(IllegalArgumentException e){}
 	}
 	@Test public void 	TestCompareifFarther() throws Exception{
-		int randomNum = 20;
+		int randomNum = 70;
 		int input = 40;
 		int lastinput = 60;
 		assertEquals("Cold!You are getting Farther!",h.Compare(randomNum,lastinput,input));
@@ -61,7 +61,7 @@ public class TestHotOrCold {
 		}
 	@Test public void 	TestCompareIfNoChange() throws Exception{
 		int randomNum = 50;
-		int input = 40;
+		int input = 60;
 		int lastinput = 60;
 		assertEquals("Distance didn't change!",h.Compare(randomNum,lastinput,input));
 		}

@@ -21,13 +21,38 @@ public class HotOrCold {
 		}
 	}
 
-	public String Compare(int i, int lastinput, int input) throws Exception {
+	public String Compare(int random, int lastinput, int input) throws Exception {
 		String s = null;
-		if(input == i){
+		if(input == random){
 			s= "Congratz you got the right number!";
 			System.out.print(s);
 			throw new Exception();
 		}
+		input=random - input;
+		lastinput = random - lastinput;
+		int i = 0, l=0;
+		if(input > 0){
+			for(int x = input;x > 0; x--)
+				i++;
+		}
+		else if(input < 0){
+			for(int x = input;x < 0; x++)
+				i++;
+		}
+		if(lastinput < 0){
+			for(int x = lastinput;x < 0; x++)
+				l++;
+		}
+		else if(lastinput > 0){
+			for(int x = lastinput;x > 0; x--)
+				l++;
+		}
+		if(i > l)
+			s="Cold!You are getting Farther!";
+		if(i < l)
+			s="Hot!You are getting Closer!";
+		if(i == l)
+			s="Distance didn't change!";
 		return s;	
 
 	}
