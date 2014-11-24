@@ -24,7 +24,7 @@ public class HotOrCold {
 	public String Compare(int random, int lastinput, int input) throws Exception {
 		String s = null;
 		if(input == random){
-			s= "Congratz you got the right number!";
+			s= "Congratz you got the right number! ";
 			System.out.print(s);
 			throw new Exception();
 		}
@@ -48,11 +48,11 @@ public class HotOrCold {
 				l++;
 		}
 		if(i > l)
-			s="Cold!You are getting Farther!";
+			s="Cold!You are getting Farther! ";
 		if(i < l)
-			s="Hot!You are getting Closer!";
+			s="Hot!You are getting Closer! ";
 		if(i == l)
-			s="Distance didn't change!";
+			s="Distance didn't change! ";
 		return s;	
 
 	}
