@@ -15,5 +15,12 @@ public class TestHotOrCold {
 		int rand = h.RandomNum();
 		assertNotEquals(rand,h.RandomNum());
 	}
-	
+	@Test public void RandomNumSize(){
+		try{
+		HotOrCold h = new HotOrCold();
+		if(h.RandomNum()<1||h.RandomNum()>75){
+			fail("Should throw IllegalArgumentException");
+		}
+		}catch(IllegalArgumentException e){}
+	}
 }
