@@ -13,4 +13,8 @@ public class HotOrCold {
 		return i;
 	}
 
+	public void CheckInput(Object input) {
+		
+	}
+
 }

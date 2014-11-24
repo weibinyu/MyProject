@@ -22,4 +22,10 @@ public class TestHotOrCold {
 		}
 		}catch(IllegalArgumentException e){}
 	}
+	@Test public void 	TestInputIsInt(){
+		try{
+			h.CheckInput("n");
+			fail("Should throw illegalArgumentExecption");
+			}catch(IllegalArgumentException e){}
+	}
 }
