@@ -1,10 +1,12 @@
 package main;
 
+import java.util.Random;
+
 public class HotOrCold {
-
+	Random rand = new Random();
 	public int RandomNum() {
-
-		return 0;
+		int i = rand.nextInt();
+		return i;
 	}
 
 }
