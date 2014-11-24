@@ -11,6 +11,7 @@ public class TestHotOrCold {
 		new HotOrCold();
 	}
 	HotOrCold h = new HotOrCold();
+	int lastinput = 0;
 	@Test public void CreateRandomNum(){
 		int rand = h.RandomNum();
 		assertNotEquals(rand,h.RandomNum());
@@ -36,5 +37,15 @@ public class TestHotOrCold {
 			h.CheckInput(input);
 			fail("Should throw illegalArgumentExecption");
 			}catch(IllegalArgumentException e){}
+	}
+	@Test public void 	TestCompare(){
+		int i = h.RandomNum();
+		int input = 40;
+		int lastinput = 60;
+		if(i-lastinput < i - input){
+			assertEquals("Cold!You are getting Farther!",h.Compare(70,lastinput,input));
+		}
+		
+			
 	}
 }

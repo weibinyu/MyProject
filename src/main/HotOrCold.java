@@ -25,4 +25,9 @@ public class HotOrCold {
 		}
 	}
 
+	public String Compare(int i, int lastinput, int input) {
+		String s = null;
+		return s;
+	}
+
 }
