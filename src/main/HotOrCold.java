@@ -40,7 +40,7 @@ public class HotOrCold {
 		return s;
 	}
 
-	public Object RestChance() {
+	public int RestChance() {
 		restChance++;
 		return restChance;
 	}

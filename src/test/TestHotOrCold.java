@@ -61,6 +61,18 @@ public class TestHotOrCold {
 		}
 	@Test public void TestRestChance(){
 		assertRestChance(1);
+		assertRestChance(2);
+		assertRestChance(3);
+		assertRestChance(4);
+		assertRestChance(5);
+		assertRestChance(6);
+		assertRestChance(7);
+		assertRestChance(8);
+		assertRestChance(9);
+		assertRestChance(10);
+		if(h.RestChance()==11){
+			fail("Should show chanes are over and end system");
+		}
 	}
 	public void assertRestChance(int input){
 		assertEquals(input,h.RestChance());
