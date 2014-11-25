@@ -1,0 +1,5 @@
+I couldn't find how to show code coverage using github so i just made this to show you.
+
+Game.java      0 percent
+HotOrCold      96 percent
+testHotOrCold  84.4 percent
